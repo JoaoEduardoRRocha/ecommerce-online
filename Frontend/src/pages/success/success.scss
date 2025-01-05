@@ -1,0 +1,72 @@
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+
+    .success-card {
+        background-color: #1e1e1e;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        color: #ffffff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        position: relative;
+
+        .success-icon {
+            font-size: 3rem;
+            color: #4caf50;
+            margin-bottom: 1rem;
+            animation: success-bounce 0.8s ease-out;
+        }
+
+        .success-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .success-message {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        .success-actions {
+            display: flex;
+            justify-content: center;
+
+            .success-button {
+                background-color: #ff9800;
+                color: #ffffff;
+                border: none;
+                border-radius: 4px;
+                padding: 0.8rem 1.5rem;
+                font-size: 1.6rem;
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #e68900;
+                }
+            }
+        }
+    }
+}
+
+@keyframes success-bounce {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
