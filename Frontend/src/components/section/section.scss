@@ -1,0 +1,202 @@
+.section-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 155rem;
+  width: 100%;
+  padding: 2rem;
+
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+    color: #fff;
+  }
+
+  &__game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+  }
+
+  &__game-card-container {
+    background: #1e1e1e;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  &__game-card-container__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &__game-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+
+  &__game-price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #f39c12;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &__game-description {
+    font-size: 1.2rem;
+    color: #bbb;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__btn-card {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+
+    .section-container__btn-buy,
+    .section-container__btn-add-cart,
+    .section-container__btn-edit,
+    .section-container__btn-delete {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      height: 3.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .section-container__btn-buy {
+      background-color: #292929;
+      color: #ececec;
+
+      &:hover {
+        background-color: #f39c12;
+        color: #fff;
+      }
+    }
+
+    .section-container__btn-add-cart {
+      background-color: #333333;
+      color: #ececec;
+
+      &:hover {
+        background-color: #444444;
+        color: #fff;
+      }
+    }
+
+    .section-container__btn-edit {
+      background-color: #f39c12;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #af710d;
+      }
+    }
+
+    .section-container__btn-delete {
+      background-color: #e53e3e;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #c53030;
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+
+@media (max-width: 500px) {
+  .section-container {
+    padding: 1rem;
+
+    &__title {
+      font-size: 2rem; /* Reduz o tamanho da fonte do título */
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    &__game-grid {
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); /* Diminui o tamanho mínimo das colunas */
+      gap: 1rem; /* Reduz o espaçamento entre os cards */
+    }
+
+    &__game-card-container {
+      padding: 0.7rem; /* Reduz o espaçamento interno */
+
+      &:hover {
+        transform: none; /* Remove o efeito de hover para evitar sobrecarga visual no mobile */
+        box-shadow: none;
+      }
+    }
+
+    &__game-card-container__img {
+      width: 100%;
+      height: 12rem; /* Reduz o tamanho da imagem */
+      border-radius: 0.3rem; /* Ajusta o arredondamento */
+      margin-bottom: 0.7rem; /* Reduz o espaçamento inferior */
+    }
+
+    &__game-name {
+      font-size: 1.4rem; /* Diminui o tamanho da fonte do nome */
+      margin-bottom: 0.2rem;
+    }
+
+    &__game-price {
+      font-size: 1.4rem; /* Diminui o tamanho da fonte do preço */
+      margin-bottom: 0.7rem;
+    }
+
+    &__game-description {
+      font-size: 1rem; /* Diminui o tamanho da fonte da descrição */
+      margin-bottom: 0.7rem;
+      -webkit-line-clamp: 2; /* Reduz o número de linhas visíveis */
+    }
+
+    &__btn-card {
+      gap: 0.5rem; /* Reduz o espaçamento entre os botões */
+
+      .section-container__btn-buy,
+      .section-container__btn-add-cart,
+      .section-container__btn-edit,
+      .section-container__btn-delete {
+        height: 3rem; /* Reduz a altura dos botões */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte dos botões */
+        padding: 0.5rem 0.8rem; /* Ajusta o espaçamento interno */
+      }
+    }
+  }
+}
