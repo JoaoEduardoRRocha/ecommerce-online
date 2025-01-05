@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./login.scss";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { setToken, getUser } from "../../auth/auth-helper";
+import { getUser, setToken } from "../../auth/auth-helper";
 import LoadingScreen from "../../components/loading-screen/loading-screen";
+import "./login.scss";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ function Login() {
     setLoading(true);
 
     axios
-      .post("http://localhost:5050/api/users/login", {
+      .post("https://joaorochadev.com:5050/api/users/login", {
         email,
         password,
       })

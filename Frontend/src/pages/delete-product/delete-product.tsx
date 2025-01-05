@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react"
 import axios from "axios"
-import { useParams, useNavigate } from "react-router-dom"
-import "./delete-product.scss"
+import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
 import LoadingScreen from "../../components/loading-screen/loading-screen"
+import "./delete-product.scss"
 
 function DeleteProductPage() {
   const { id } = useParams<{ id: string }>()
@@ -14,7 +14,7 @@ function DeleteProductPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:5050/api/games/${id}`)
+        const response = await axios.get(`https://joaorochadev.com:5050/api/games/${id}`)
         setProduct(response.data)
       } catch (error) {
         console.log("Erro ao buscar produto: ", error)
@@ -29,7 +29,7 @@ function DeleteProductPage() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5050/api/games/${id}`, {
+      await axios.delete(`https://joaorochadev.com:5050/api/games/${id}`, {
         headers: { "access-token": localStorage.getItem("token") || "" },
       })
       alert("Produto excluído com sucesso!")

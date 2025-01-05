@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./signup.scss";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LoadingScreen from "../../components/loading-screen/loading-screen";
+import "./signup.scss";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -25,7 +25,7 @@ function SignUp() {
     setLoading(true);
 
     axios
-      .post("http://localhost:5050/api/users/signup", {
+      .post("https://joaorochadev.com:5050/api/users/signup", {
         name,
         email,
         password,

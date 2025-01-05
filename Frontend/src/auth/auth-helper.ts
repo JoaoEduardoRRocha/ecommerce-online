@@ -18,7 +18,7 @@ export const getUser = async (): Promise<UserModel | null> => {
   if (!token) return null
 
   try {
-    const response = await axios.get(`http://localhost:5050/api/users/me`, {
+    const response = await axios.get(`https://joaorochadev.com:5050/api/users/me`, {
       headers: { 'access-token': token },
     })
     return response.data as UserModel

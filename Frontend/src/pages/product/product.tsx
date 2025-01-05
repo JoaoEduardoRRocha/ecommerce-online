@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react"
 import axios from "axios"
-import { useParams, useNavigate } from "react-router-dom"
-import "./product.scss"
-import LoadingScreen from "../../components/loading-screen/loading-screen"
+import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
 import { isAuthenticated } from '../../auth/auth-helper'
+import LoadingScreen from "../../components/loading-screen/loading-screen"
+import "./product.scss"
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>()
@@ -15,7 +15,7 @@ function ProductPage() {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5050/api/games/${id}`
+          `https://joaorochadev.com:5050/api/games/${id}`
         )
         setProduct(response.data)
       } catch (error) {
@@ -40,7 +40,7 @@ function ProductPage() {
       }
 
       const response = await axios.post(
-        "http://localhost:5050/api/checkout/",
+        "https://joaorochadev.com:5050/api/checkout/",
         { gameId: product.id },
         { headers: { "access-token": localStorage.getItem("token") } }
       )

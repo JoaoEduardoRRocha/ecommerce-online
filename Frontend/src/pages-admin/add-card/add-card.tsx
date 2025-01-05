@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react"
-import { Navigate } from "react-router-dom"
-import "./add-card.scss"
 import axios from "axios"
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from "react"
+import { Link, Navigate } from "react-router-dom"
 import { getToken, getUser } from "../../auth/auth-helper"
 import LoadingScreen from "../../components/loading-screen/loading-screen"
+import "./add-card.scss"
 
 function AddCard() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -56,7 +55,7 @@ function AddCard() {
     e.preventDefault();
     setFormSubmitting(true);
     try {
-      await axios.post("http://localhost:5050/api/games/", formData, {
+      await axios.post("https://joaorochadev.com:5050/api/games/", formData, {
         headers: {
           'access-token': getToken(),
         },

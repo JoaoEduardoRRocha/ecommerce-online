@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import "./section.scss";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getUser } from "../../auth/auth-helper";
+import "./section.scss";
 
 const Section = () => {
   const [games, setGames] = useState([]);
@@ -11,7 +11,7 @@ const Section = () => {
   useEffect(() => {
     const fetchGames = async () => {
       await axios
-        .get("http://localhost:5050/api/games/")
+        .get("https://joaorochadev.com:5050/api/games/")
         .then((response) => {
           setGames(response.data as []);
         })
