@@ -1,4 +1,4 @@
-# **Ecommerce Online**
+# **Ecommerce Online Full Stack**
 
 Este projeto é uma plataforma de ecommerce robusta e segura, que oferece uma experiência de compra moderna, com autenticação segura de usuários e integração eficiente entre backend e frontend. O sistema permite a autenticação via JWT e OTP, além de suportar pagamentos de forma segura e dinâmica, utilizando uma API Restful e banco de dados para gerenciar informações de usuários e produtos.
 
