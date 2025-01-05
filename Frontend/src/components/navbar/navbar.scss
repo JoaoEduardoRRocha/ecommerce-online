@@ -1,0 +1,29 @@
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: linear-gradient(360deg, rgb(36, 36, 36) 5%, rgb(0, 0, 0) 100%);
+
+    &__logo-name-content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 7.5rem;
+    }
+
+    &__btn-login {
+        color: var(--primary-color);
+        padding: 1rem;
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+    &__btn-login:hover {
+        filter: brightness(1.2);
+        cursor: pointer;
+    }
+}
+
