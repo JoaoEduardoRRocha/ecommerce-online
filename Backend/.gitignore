@@ -1,0 +1,6 @@
+node_modules/
+dist/
+coverage/
+globalConfig.json
+.wwebjs_auth
+.wwebjs_cache
