@@ -1,0 +1,52 @@
+.navbar-container-bg {
+    background: linear-gradient(360deg, rgb(36, 36, 36) 5%, rgb(0, 0, 0) 100%);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: auto;
+    max-width: 151rem;
+
+    &__logo-name-content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 7.5rem;
+    }
+
+    &__logo-name {
+        font-size: 2rem;
+        margin-left: 1rem;
+        font-weight: 800;
+    }
+
+    &__nav-options {
+        display: flex;
+        align-content: center;
+    }
+
+    &__options {
+        margin: 1rem;
+    }
+
+    &__btn-add-itens {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-color);
+        padding: 1rem;
+        background-color: #2b2b2b;
+        border: none;
+        border-radius: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    &__btn-add-itens:hover {
+        filter: brightness(1.2);
+        cursor: pointer;
+    }
+}
+
