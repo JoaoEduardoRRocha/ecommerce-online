@@ -14,7 +14,7 @@ function DeleteProductPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`https://joaorochadev.com:5050/api/games/${id}`)
+        const response = await axios.get(`https://joaorochadev.com:/api/games/${id}`)
         setProduct(response.data)
       } catch (error) {
         console.log("Erro ao buscar produto: ", error)
@@ -29,7 +29,7 @@ function DeleteProductPage() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://joaorochadev.com:5050/api/games/${id}`, {
+      await axios.delete(`https://joaorochadev.com:/api/games/${id}`, {
         headers: { "access-token": localStorage.getItem("token") || "" },
       })
       alert("Produto excluído com sucesso!")

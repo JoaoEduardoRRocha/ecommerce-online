@@ -55,7 +55,7 @@ function AddCard() {
     e.preventDefault();
     setFormSubmitting(true);
     try {
-      await axios.post("https://joaorochadev.com:5050/api/games/", formData, {
+      await axios.post("https://joaorochadev.com:/api/games/", formData, {
         headers: {
           'access-token': getToken(),
         },

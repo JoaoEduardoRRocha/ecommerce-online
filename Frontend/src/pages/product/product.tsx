@@ -15,7 +15,7 @@ function ProductPage() {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `https://joaorochadev.com:5050/api/games/${id}`
+          `https://joaorochadev.com:/api/games/${id}`
         )
         setProduct(response.data)
       } catch (error) {
@@ -40,7 +40,7 @@ function ProductPage() {
       }
 
       const response = await axios.post(
-        "https://joaorochadev.com:5050/api/checkout/",
+        "https://joaorochadev.com:/api/checkout/",
         { gameId: product.id },
         { headers: { "access-token": localStorage.getItem("token") } }
       )

@@ -25,7 +25,7 @@ function SignUp() {
     setLoading(true);
 
     axios
-      .post("https://joaorochadev.com:5050/api/users/signup", {
+      .post("https://joaorochadev.com:/api/users/signup", {
         name,
         email,
         password,

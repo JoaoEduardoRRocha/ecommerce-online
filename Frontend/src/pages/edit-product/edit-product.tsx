@@ -32,7 +32,7 @@ function EditProductPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get<Product>(`https://joaorochadev.com:5050/api/games/${id}`)
+        const response = await axios.get<Product>(`https://joaorochadev.com:/api/games/${id}`)
         const productData = response.data
 
         setProduct(productData)
@@ -81,7 +81,7 @@ function EditProductPage() {
   const handleSave = async () => {
     try {
       const payload = { ...formData, id }
-      await axios.put(`https://joaorochadev.com:5050/api/games/${id}`, payload, {
+      await axios.put(`https://joaorochadev.com:/api/games/${id}`, payload, {
         headers: { "access-token": localStorage.getItem("token") || "" },
       })
       alert("Produto atualizado com sucesso!")

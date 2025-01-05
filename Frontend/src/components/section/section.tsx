@@ -11,7 +11,7 @@ const Section = () => {
   useEffect(() => {
     const fetchGames = async () => {
       await axios
-        .get("https://joaorochadev.com:5050/api/games/")
+        .get("https://joaorochadev.com:/api/games/")
         .then((response) => {
           setGames(response.data as []);
         })
