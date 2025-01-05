@@ -1,0 +1,98 @@
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    padding: 2rem;
+  
+    .product-card {
+      background-color: #1e1e1e;
+      padding: 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      max-width: 40rem;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+  
+      .product-title {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+  
+      .product-label {
+        display: block;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+      }
+  
+      .product-input,
+      .product-textarea {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.4rem;
+        color: #fff;
+        background-color: #292929;
+        border: none;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+        &::placeholder {
+          color: #bbb;
+        }
+  
+        &:focus {
+          outline: none;
+          border: 1px solid #f39c12;
+        }
+      }
+  
+      .product-textarea {
+        resize: none;
+        height: 8rem;
+      }
+  
+      .product-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        gap: 1rem;
+  
+        .product-button-save,
+        .product-button-cancel {
+          flex: 1;
+          padding: 1rem;
+          font-size: 1.4rem;
+          font-weight: bold;
+          border: none;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+  
+          &.product-button-save {
+            background-color: #f39c12;
+            color: #fff;
+  
+            &:hover {
+              background-color: #d68910;
+            }
+          }
+  
+          &.product-button-cancel {
+            background-color: #292929;
+            color: #ececec;
+  
+            &:hover {
+              background-color: #444444;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  
