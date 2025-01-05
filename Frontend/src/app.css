@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-size: 62.5%;
+    --primary-color: rgb(236, 236, 236);
+  }
+  
+  body {
+    position: relative;
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
+    background: rgb(17, 17, 17)
+
+  }
+
+  .hero-img {
+    position: absolute;
+    z-index: -1;
+}
