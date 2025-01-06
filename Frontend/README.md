@@ -1,26 +1,40 @@
 # **Ecommerce Online Full Stack**
 
-Este projeto é uma plataforma de ecommerce robusta e segura, que oferece uma experiência de compra moderna, com autenticação segura de usuários e integração eficiente entre backend e frontend. O sistema permite a autenticação via JWT e OTP, além de suportar pagamentos de forma segura e dinâmica, utilizando uma API Restful e banco de dados para gerenciar informações de usuários e produtos.
+Este projeto é uma plataforma de ecommerce robusta e segura, que oferece uma experiência de compra moderna com autenticação de usuários, pagamentos dinâmicos e uma integração eficiente entre backend e frontend. O sistema suporta autenticação via JWT e OTP, gerenciamento de produtos e usuários com banco de dados e páginas dinâmicas protegidas por autenticação.
 
-| Funcionalidades Concluídas 🟢 |
-| :--------------------------: |
-| 🟢 API Restfull |
-| 🟢 Autenticação com JWT e OTP |
-| 🟢 Autenticação de Pagamento |
-| 🟢 Formulário com tipos de inputs variados |
-| 🟢 Integrações eficientes entre backend e frontend |
-| 🟢 Banco de dados para armazenar usuários e produtos |
-| 🟢 Páginas dinâmicas e totalmente autenticadas |
+## **Funcionalidades Concluídas** 🟢
+| **Funcionalidade**                          | **Descrição**                                                         |
+|---------------------------------------------|------------------------------------------------------------------------|
+| 🟢 **API Restful**                          | Backend estruturado com API para comunicação entre cliente e servidor. |
+| 🟢 **Autenticação com JWT e OTP**           | Suporte a autenticação segura de usuários com tokens e OTP.           |
+| 🟢 **Autenticação de Pagamento**            | Sistema de pagamentos seguro e integrado com Stripe.                  |
+| 🟢 **Formulário com inputs variados**       | Formulários dinâmicos e responsivos para captura de dados.            |
+| 🟢 **Integrações entre backend e frontend** | Comunicação eficiente via Axios para troca de dados.                  |
+| 🟢 **Banco de Dados**                       | Gerenciamento de informações de usuários e produtos com MongoDB.      |
+| 🟢 **Páginas Dinâmicas**                    | Páginas autenticadas e geradas dinamicamente.                         |
 
-## Tecnologias Utilizadas:
-- ReactJS
-- Axios
-- TypeScript
-- HTML
-- CSS
+---
 
-## Como Executar o Projeto:
+## **Tecnologias Utilizadas**
 
-# Clone o repositório:
-   ```bash
-   git clone `repositorio`
+### **Frontend**
+- **ReactJS**: Framework para criação de interfaces de usuário dinâmicas e responsivas.
+- **Axios**: Biblioteca para comunicação com o backend via HTTP.
+- **TypeScript**: Para um código mais robusto e tipado.
+- **HTML e CSS**: Estruturação e estilização das páginas.
+
+### **Backend**
+- **Express**: Framework Node.js para criação da API.
+- **Json Web Token (JWT)**: Autenticação baseada em tokens.
+- **OTP**: Autenticação em dois fatores com códigos temporários.
+- **Bcrypt**: Para criptografia segura de senhas.
+- **MongoDB**: Banco de dados não relacional para gerenciamento de dados.
+- **Stripe**: Integração para processamento seguro de pagamentos.
+
+---
+
+## **Como Executar o Projeto**
+
+### **Clone o Repositório**
+```bash
+git clone `repositorio`
